@@ -30,7 +30,7 @@ This project has the potential to improve the diagnosis and management of thyroi
 ### Source of dataset:
 Thyroid Data - https://archive.ics.uci.edu/ml/datasets/thyroid+disease , https://www.kaggle.com/datasets/emmanuelfwerr/thyroid-disease-data , https://www.kaggle.com/datasets/emmanuelfwerr/thyroid-disease-data
 
-For this dataset, there are 9172 rows and 14 columns.
+For this dataset, there are 9172 rows and 30 columns.
 
 ### Brief description of data:
 The datasets featured were created by reconciling thyroid disease datasets provided by the UCI Machine Learning Repository of patient background information and blood test results along with thyroid-related medical diagnosis
@@ -44,42 +44,42 @@ conditions are divided into groups where each group corresponds to a class of co
 
 - Letter Diagnosis: 
 
-hyperthyroid conditions:
+*hyperthyroid conditions:
 
 A   hyperthyroid
 B   T3 toxic
 C   toxic goitre
 D   secondary toxic
 
-hypothyroid conditions:
+*hypothyroid conditions:
 
 E   hypothyroid
 F   primary hypothyroid
 G   compensated hypothyroid
 H   secondary hypothyroid
 
-binding protein:
+*binding protein:
 
 I   increased binding protein
 J   decreased binding protein
 
-general health:
+*general health:
 
 K   concurrent non-thyroidal illness
 
-replacement therapy:
+*replacement therapy:
 
 L   consistent with replacement therapy
 M   underreplaced
 N   overreplaced
 
-antithyroid treatment:
+*antithyroid treatment:
 
 O   antithyroid drugs
 P   I131 treatment
 Q   surgery
 
-miscellaneous:
+*miscellaneous:
 
 R   discordant assay results
 S   elevated TBG
