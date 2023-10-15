@@ -145,35 +145,30 @@ The main reason for dropping the other classes is that they are not important to
 ## Model
  ### Maching Learning Using the Following Models:
     Three prediction models were tested:
-       - LogisticRegression
-       - k-nearest neighbors
-       - Random Forest
-
-    All the 3 models were tuned to get a better metrics results using grid_search.
+       - eXtreme Gradient Boosting
+       - LightGBM
+       - GradientBoostingClassifier
 
  ### Models Evaluated & Results
  
-Tuned Random Forest model gave the best results with:
-- Accuracy = 0.88
-- Precision = 0.85
-- Recall = 0.78
-- F1-score = 0.86
-
+LightGBM model gave the best results with:
+- Accuracy = 0.99 
+- Precision = 0.94
+- Recall = 0.93
+- F1-score = 0.93
+  
+- Number of patients that are healthy but predicted to have hypothyroid (false positive): 0.12%.
+- Number of patients that are healthy but predicted to have hyperthyroid (false positive): 0.65%.
+- Number of patients that have hypothyroid but predicted to be healthy (false negative): 4.10%.
+- Number of patients that have hypothyroid but predicted to have hyperthyroid : 0%.
+- Number of patients that have hyperthyroid but predicted to be healthy (false negative): 14.54%.
+- Number of patients that have hyperthyroid but predicted to have hypothyroid: 0%.
 
 ## Recommendations:
-- It is better to include more data entries.
-- Choice of variable features: It is better to include parameters that are more related to the diagnosis of the Metabolic Syndrome. In such case, it will be possible to do feature engineering. For example, we could calculate:
-  *siMS score = 2*Waist/Height + Gly/5.6 + Tg/1.7 + TAsystolic/130—HDL/1.02 or 1.28 (for male or female subjects, respectively).
-  *siMS risk score = siMS score * age/45 or 50 (for male or female subjects, respectively) * family history of cardio/cerebro-vascular events (event = 1.2, no event = 1).
+- 
 
-  ## Conclusion & Next Steps
-The present project used anthropometric, lifestyle, and blood test features to compare the performance of MetSyn prediction models. 
+## Conclusion & Next Steps
 
-Among these MetSyn prediction models, Tuned Random Forest model showed high accuracy in identifying participants with MetSyn. It can assist in identifying patient with metabolic syndrome early, allowing for timely interventions and improvements in patient health conditions. The model's ability to accurately predict metabolic syndrome can prevent the development of  more serious illness that can be costly for the government in the future (social aid, national health assurance,...).
-
-The anthropometric and blood test features were identified as more important features for MetSyn prediction in the studied population than lifestyle features. 
-
-Therefore, early diagnosis of MetSyn is important, requiring a multidimensional approach that includes self-administered questionnaire, anthropometric, and biochemical measurements.
 
 
 ### For further information
