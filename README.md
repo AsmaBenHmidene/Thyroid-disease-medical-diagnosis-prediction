@@ -38,53 +38,6 @@ The datasets featured were created by reconciling thyroid disease datasets provi
 - What is the target column?
 target - hyperthyroidism medical diagnosis (str).
 
-A diagnosis "-" indicates no condition requiring comment.  A diagnosis of the
-form "X|Y" is interpreted as "consistent with X, but more likely Y".  The
-conditions are divided into groups where each group corresponds to a class of comments.
-
---Letter Diagnosis: 
-
-- hyperthyroid conditions:
-
-(A)   hyperthyroid
-(B)   T3 toxic
-(C)   toxic goitre
-(D)   secondary toxic
-
-- hypothyroid conditions:
-
-(E)   hypothyroid
-(F)   primary hypothyroid
-(G)   compensated hypothyroid
-(H)   secondary hypothyroid
-
-- binding protein:
-
-(I)   increased binding protein
-(J)   decreased binding protein
-
-- general health:
-
-(K)   concurrent non-thyroidal illness
-
-- replacement therapy:
-
-(L)   consistent with replacement therapy
-(M)   underreplaced
-(N)   overreplaced
-
-- antithyroid treatment:
-
-(O)   antithyroid drugs
-(P)   I131 treatment
-(Q)   surgery
-
-- miscellaneous:
-
-(R)   discordant assay results
-(S)   elevated TBG
-(T)   elevated thyroid hormones
-
 ## Methods
 To prepare this data, the data was cleaned, and the following processes were performed:
 ### Exploratory Data Analysis
@@ -205,3 +158,24 @@ Tuned Random Forest model gave the best results with:
 - Precision = 0.85
 - Recall = 0.78
 - F1-score = 0.86
+
+
+## Recommendations:
+- It is better to include more data entries.
+- Choice of variable features: It is better to include parameters that are more related to the diagnosis of the Metabolic Syndrome. In such case, it will be possible to do feature engineering. For example, we could calculate:
+  *siMS score = 2*Waist/Height + Gly/5.6 + Tg/1.7 + TAsystolic/130—HDL/1.02 or 1.28 (for male or female subjects, respectively).
+  *siMS risk score = siMS score * age/45 or 50 (for male or female subjects, respectively) * family history of cardio/cerebro-vascular events (event = 1.2, no event = 1).
+
+  ## Conclusion & Next Steps
+The present project used anthropometric, lifestyle, and blood test features to compare the performance of MetSyn prediction models. 
+
+Among these MetSyn prediction models, Tuned Random Forest model showed high accuracy in identifying participants with MetSyn. It can assist in identifying patient with metabolic syndrome early, allowing for timely interventions and improvements in patient health conditions. The model's ability to accurately predict metabolic syndrome can prevent the development of  more serious illness that can be costly for the government in the future (social aid, national health assurance,...).
+
+The anthropometric and blood test features were identified as more important features for MetSyn prediction in the studied population than lifestyle features. 
+
+Therefore, early diagnosis of MetSyn is important, requiring a multidimensional approach that includes self-administered questionnaire, anthropometric, and biochemical measurements.
+
+
+### For further information
+
+For any additional questions, please contact: Asma Ben Hmidene **asmabhpython@gmail.com**
