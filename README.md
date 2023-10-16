@@ -146,12 +146,14 @@ The main reason for dropping the other classes is that they are not important to
 
 >In the diagonals of the pairplot we can see the distributions of each numeric variable with respect to one another.
 >We can observe that for some Hormone test vs others, there are nice clusters that form. This is encouraging because it means that they do a good job at separating out each of our target classes:
+>
 >- FTI vs T3
 >- FTI vs T4U
 >- FTI vs age
 >- T4U vs TT4
 >- TT4 vs age
 >- TT4 vs T3
+
 > There is a positive correlation between FTI, T3, and TT4. When one of them increase the others increase as well. hypothyroid patients have a low level of FTI, T3 and TT4, while hyperthyroid patients have a higher level compared to normal. 
 >It is apparent how unbalanced the dataset is, with so many negative 'target' compared to hypothyroid or hyperthyroid. but we knew this from the start and It is normal for this type of data. We will have to treat with resampling protocol or using models that handle this well : XGBoost and LightGBM would be a good options.
 
