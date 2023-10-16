@@ -141,6 +141,18 @@ The main reason for dropping the other classes is that they are not important to
 >
 >We do not know the units that the different hormone blood measurements in our dataset use. But knowing about what these levels are usually for individuals can help us tremendously in understanding our dataset. As well as making hypothesis of the units that are used in the dataset and detecting Outliers/inconsistencies.
 
+#### Visual 10 
+![sample image](Figure10.png)
+
+>In the diagonals of the pairplot we can see the distributions of each numeric variable with respect to one another.
+>We can observe that for some Hormone test vs others, there are nice clusters that form. This is encouraging because it means that they do a good job at separating out each of our target classes.
+- FTI vs T3
+- FTI vs T4U
+- FTI vs age
+- T4U vs TT4
+- TT4 vs age
+- TT4 vs T3
+>It is apparent how unbalanced the dataset is, with so many negative 'target' compared to hypothyroid or hyperthyroid. but we knew this from the start and It is normal for this type of data. We will have to treat with resampling protocol or using models that handle this well : XGBoost and LightGBM would be a good options.
 
 ## Model
  ### Maching Learning Using the Following Models:
@@ -163,6 +175,8 @@ LightGBM model gave the best results with:
 - Number of patients that have hypothyroid but predicted to have hyperthyroid : 0%.
 - Number of patients that have hyperthyroid but predicted to be healthy (false negative): 14.54%.
 - Number of patients that have hyperthyroid but predicted to have hypothyroid: 0%.
+
+>LightGBM model produced good results without the need of any technique to deal with imbalanced datasets. 
 
 ## Recommendations:
 - 
