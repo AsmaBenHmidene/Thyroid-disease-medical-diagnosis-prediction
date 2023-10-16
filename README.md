@@ -99,7 +99,7 @@ To prepare this data, the data was cleaned, and the following processes were per
 
 Moving forward with the analysis it has been decided to only keep the observations for patients with diagnosis either negative, hyperthyroid, or hypothyroid. This is because they are the most prevalent observations and the focus of this project. The other classes were dropped from the dataset upon import and thus we are left with ~7500 unique entries in the dataset.
 
-The main reason for dropping the other classes is that they are not important to our focus because either they don't relate to thyroid disease (for example non-thyroidal, discordant results), or they refer to a treatment (for example undergoing replacement therapy). Another big, probably more important, reason is that they create noise in our data. Our most important attributes are the blood test results of hormone levels. The other target classes referring to treatments and other conditions blurr barriers between classes. We believe they belong in a different analysis with a slightly different focus.
+The main reason for dropping the other classes is that they are not important to our focus because either they don't relate to thyroid disease (for example discordant results), or they refer to a treatment (for example undergoing replacement therapy). Another big, probably more important, reason is that they create noise in our data. Our most important attributes are the blood test results of hormone levels. The other target classes referring to treatments and other conditions blurr barriers between classes.
 
 
 #### Visual 6 
@@ -145,25 +145,26 @@ The main reason for dropping the other classes is that they are not important to
 ![sample image](Figure10.png)
 
 >In the diagonals of the pairplot we can see the distributions of each numeric variable with respect to one another.
->We can observe that for some Hormone test vs others, there are nice clusters that form. This is encouraging because it means that they do a good job at separating out each of our target classes.
-- FTI vs T3
-- FTI vs T4U
-- FTI vs age
-- T4U vs TT4
-- TT4 vs age
-- TT4 vs T3
+>We can observe that for some Hormone test vs others, there are nice clusters that form. This is encouraging because it means that they do a good job at separating out each of our target classes:
+>- FTI vs T3
+>- FTI vs T4U
+>- FTI vs age
+>- T4U vs TT4
+>- TT4 vs age
+>- TT4 vs T3
+> There is a positive correlation between FTI, T3, and TT4. When one of them increase the others increase as well. hypothyroid patients have a low level of FTI, T3 and TT4, while hyperthyroid patients have a higher level compared to normal. 
 >It is apparent how unbalanced the dataset is, with so many negative 'target' compared to hypothyroid or hyperthyroid. but we knew this from the start and It is normal for this type of data. We will have to treat with resampling protocol or using models that handle this well : XGBoost and LightGBM would be a good options.
 
 ## Model
  ### Maching Learning Using the Following Models:
-    Three prediction models were tested:
-       - eXtreme Gradient Boosting
-       - LightGBM
-       - GradientBoostingClassifier
+    >Three prediction models were tested:
+       >- eXtreme Gradient Boosting
+       >- LightGBM
+       >- GradientBoostingClassifier
 
  ### Models Evaluated & Results
  
-LightGBM model gave the best results with:
+>LightGBM model gave the best results with:
 - Accuracy = 0.99 
 - Precision = 0.94
 - Recall = 0.93
