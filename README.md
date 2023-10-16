@@ -179,11 +179,16 @@ The main reason for dropping the other classes is that they are not important to
 
 >LightGBM model produced good results without the need of any technique to deal with imbalanced datasets. 
 
-## Recommendations:
-- 
+## Limitation and Recommendations:
+- We analyze that the feature selection technique can be effective in improving the results, but it also reduces the size of data.
+- This small feature set after the selection of important features is a limitation of this study.
+- Another limitation is the small size of data that urged us to considers only three classes instead of five or six target classes that will give us more specific diagnosis related to what type of hyperthyroid or hypothyroid patient have.
+- Considering all these limitations, in future work, will improve thyroid disease dignosis prediction accuracy and efficiency.
 
 ## Conclusion & Next Steps
+The thyroid disease prediction has been challenging, as the prior detection and evaluation of thyroid symptoms without doctor involvement are not easy. Yet, with an alarming increase in recent years, thyroid disease detection has emerged as an important medical problem and requires efficient automatic prediction models. Therefore, thyroid disease classification solutions can accurately predict the thyroid disease type like hyperthyroidism or hypothyroidism, given the machine learning models are trained with sufficient data samples.
 
+Having additional data, will open the posibility to explore more categories in the datasets, such as, primary, secondary hypothyroid, T3 toxic, secondary toxic,...
 
 
 ### For further information
