@@ -69,6 +69,7 @@ To prepare this data, the data was cleaned, and the following processes were per
 #### Visual 4 
 ![sample image](Figure4.png)
 
+>What type of treatment patients are receiving? 
 >The analysis of the prescribed treatment shows that main treatment is the thyroixine with 13.5 % patient taking it, followed by the I131 treatmant (1.8%), then doing surgery to remove the thyroid (1.5%) and finally anti-thyroid medications (1.3%).
 
 #### Visual 5 
@@ -154,7 +155,8 @@ The main reason for dropping the other classes is that they are not important to
 >- TT4 vs age
 >- TT4 vs T3
 
-> There is a positive correlation between FTI, T3, and TT4. When one of them increase the others increase as well. hypothyroid patients have a low level of FTI, T3 and TT4, while hyperthyroid patients have a higher level compared to normal. 
+> There is a positive correlation between FTI, T3, and TT4. When one of them increase the others increase as well. hypothyroid patients have a low level of FTI, T3 and TT4, while hyperthyroid patients have a higher level compared to normal.
+> 
 >It is apparent how unbalanced the dataset is, with so many negative 'target' compared to hypothyroid or hyperthyroid. but we knew this from the start and It is normal for this type of data. We will have to treat with resampling protocol or using models that handle this well : XGBoost and LightGBM would be a good options.
 
 ## Model
