@@ -169,16 +169,16 @@ The main reason for dropping the other classes is that they are not important to
  ### Models Evaluated & Results
  
 >LightGBM model gave the best results with:
-- Accuracy = 0.99 
+- Accuracy = 0.99
 - Precision = 0.94
 - Recall = 0.93
 - F1-score = 0.93
   
-- Number of patients that are healthy but predicted to have hypothyroid (false positive): 0.12%.
-- Number of patients that are healthy but predicted to have hyperthyroid (false positive): 0.65%.
-- Number of patients that have hypothyroid but predicted to be healthy (false negative): 4.10%.
+- Number of patients that are healthy but predicted to have hypothyroid (false positive): 0.41%.
+- Number of patients that are healthy but predicted to have hyperthyroid (false positive): 0.47%.
+- Number of patients that have hypothyroid but predicted to be healthy (false negative): 1.20%.
 - Number of patients that have hypothyroid but predicted to have hyperthyroid : 0%.
-- Number of patients that have hyperthyroid but predicted to be healthy (false negative): 14.54%.
+- Number of patients that have hyperthyroid but predicted to be healthy (false negative): 18.96%.
 - Number of patients that have hyperthyroid but predicted to have hypothyroid: 0%.
 
 >LightGBM model produced good results without the need of any technique to deal with imbalanced datasets. 
